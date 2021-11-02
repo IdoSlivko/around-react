@@ -1,6 +1,6 @@
 import React from 'react';
 import PopupWithForm from './PopupWithForm.js';
-import PopupWithImage from './PopupWithImage.js';
+import ImagePopup from './ImagePopup.js';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
@@ -148,7 +148,7 @@ export default function App() {
         submitText="Yes"
       />
 
-      <PopupWithImage
+      <ImagePopup
         data={selectedCard}
         onClose={closeAllPopups}
       />
