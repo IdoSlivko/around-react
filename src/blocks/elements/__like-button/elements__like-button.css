@@ -1,0 +1,17 @@
+.elements__like-button {
+	width: 21px;
+	height: 19px;
+	background-color: initial;
+	/* background-color: #f00; */
+	background-image: url(../../../images/icon_heart_disable.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+	border: none;
+	transition: opacity 0.1s linear 0.05s;
+}
+
+.elements__like-button:hover {
+	cursor: pointer;
+	opacity: .5;
+}

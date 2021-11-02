@@ -1,0 +1,26 @@
+.elements__description {
+	display: flex;
+	justify-content: space-between;
+	/* NEW */
+	align-items: center;
+	/* NEW */
+	/* align-items: flex-end; */
+	max-width: 246px;
+	margin: 27px auto 31px;
+}
+
+@media screen and (max-width: 1024px) {
+
+	.elements__description {
+		max-width: 500px;
+	}
+
+}
+
+@media all and (max-width: 768px) {
+	
+	.elements__description {
+		max-width: 246px;
+	}
+
+}

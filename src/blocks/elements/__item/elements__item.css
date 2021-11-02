@@ -1,0 +1,23 @@
+.elements__item {
+	position: relative;
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+
+	.elements__item {
+		border-radius: 22px;
+	}
+
+}
+
+@media all and (max-width: 320px) {
+
+	.elements__item {
+		border-radius: 10px;
+	}
+	
+}
