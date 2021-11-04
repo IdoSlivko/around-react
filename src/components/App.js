@@ -5,14 +5,13 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 
-
 export default function App() {
 
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState({name: '' , link: ''});
-  const [deletedCard, setDeletedCard] = React.useState(false);
+  const [isConfirmDeleteCard, setConfirmDeleteCard] = React.useState(false);
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -30,8 +29,8 @@ export default function App() {
     setSelectedCard({name: data.name, link: data.link});
   }
   
-  function handleDeleteClick(boolean) {
-    setDeletedCard(boolean);
+  function handleDeleteClick() {
+    setConfirmDeleteCard(true);
   }
 
   
@@ -40,7 +39,7 @@ export default function App() {
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setSelectedCard({name: '' , link: ''});
-    setDeletedCard(false);
+    setConfirmDeleteCard(false);
   }
   
   return (
@@ -143,7 +142,7 @@ export default function App() {
       <PopupWithForm
         name="alert-delete"
         title="Are you sure?"
-        isOpen={deletedCard}
+        isOpen={isConfirmDeleteCard}
         onClose={closeAllPopups}
         submitText="Yes"
       />
