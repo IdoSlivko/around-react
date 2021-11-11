@@ -9,7 +9,7 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 
-import { api } from '../utils/api.js';
+import api from '../utils/api.js';
 
 import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
 import { CurrentCardContext } from '../contexts/CurrentCardContext.js';
@@ -49,7 +49,7 @@ export default function App() {
     setIsAddPlacePopupOpen(false);
     setSelectedCard({ name: '' , link: '' });
   }
-  
+
   React.useEffect(() => {
     api.getProfileInfo()
     .then((res) => {
